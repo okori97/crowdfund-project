@@ -30,12 +30,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Desktop](./images/desktop-screenshot.png)
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [Github](https://github.com/okori97/crowdfund-project)
+-   Live Site URL: [](https://your-live-site-url.com)
 
 ## My process
 
@@ -117,7 +117,7 @@ I plan to develop my file structure too. I understand it's project dependent, to
 
 ### Useful resources
 
--   [CSS Organizing](hhttps://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing) - This helped me tidy up my App.css file, and think about how to organise my css files better going forward.
+-   [CSS Organizing](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing) - This helped me tidy up my App.css file, and think about how to organise my css files better going forward.
 
 -   [File structure](https://blog.webdevsimplified.com/2022-07/react-folder-structure/) - This was a useful article. I had used some of these patterns in previous projects, but there was alot I hadn't done before.
 
