@@ -1,0 +1,53 @@
+.bookmark {
+	cursor: pointer;
+	width: fit-content;
+	position: relative;
+	background-color: var(--Light-gray);
+	font-weight: 700;
+	color: var(--Dark-gray);
+	border: none;
+	border-radius: 32px;
+	height: fit-content;
+	padding: 16px 32px 16px 64px;
+}
+
+.project-logo {
+	width: 56px;
+	position: absolute;
+	top: -26px;
+	left: 48%;
+}
+.bookmark:hover {
+	color: rgba(0, 0, 0, 0.331);
+}
+.bookmark:hover > img {
+	opacity: 50%;
+}
+
+.bookmark > img {
+	height: 50px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.bookmark.bookmarked {
+	color: var(--Dark-cyan);
+}
+
+.bookmark.bookmarked > img {
+	filter: invert(37%) sepia(15%) saturate(3760%) hue-rotate(136deg)
+		brightness(80%) contrast(74%);
+}
+
+@media only screen and (max-width: 520px) {
+	.bookmark {
+		height: 50px;
+		width: 50px;
+		padding: 0;
+	}
+
+	.bookmark > span {
+		display: none;
+	}
+}

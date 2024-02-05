@@ -1,0 +1,299 @@
+:root {
+	/* Primary Colours */
+
+	--Moderate-cyan: hsl(176, 50%, 47%);
+	--Dark-cyan: #147b74;
+
+	/* Neutral Colours  */
+	--Black: hsl(0, 0%, 0%);
+	--Dark-gray: #7a7a7a;
+	--moderate-gray: rgb(205, 205, 205);
+	--Light-gray: rgb(244, 244, 244);
+}
+
+/* || Global styles */
+
+* {
+	font-family: "Commissioner", sans-serif;
+}
+
+#root {
+	width: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+.app {
+	margin: 0;
+	background-color: rgb(252, 252, 252);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+/* || Typography */
+
+h1 {
+	font-size: 32px;
+	margin: 0px 0px 16px 0px;
+}
+
+h3 {
+	font-size: 24px;
+	margin: 0 0 16px 0;
+}
+
+h4 {
+	margin: 0;
+}
+
+p {
+	color: var(--Dark-gray);
+	margin: 0;
+	line-height: 2rem;
+	white-space: pre-wrap;
+}
+
+.data {
+	margin: 0;
+}
+
+.data.small {
+	font-size: 24px;
+	margin: 0;
+}
+
+/* || App Wide */
+
+.logo {
+	width: 128px;
+	height: 20px;
+}
+
+.project-wrapper {
+	z-index: 2;
+	top: -100px;
+	max-width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.primary {
+	cursor: pointer;
+	width: fit-content;
+	background-color: var(--Moderate-cyan);
+	font-weight: 700;
+	color: white;
+	border: none;
+	border-radius: 32px;
+	height: fit-content;
+	padding: 16px 32px 16px 32px;
+}
+
+.primary.margin-top {
+	margin-top: 32px;
+}
+
+.primary:hover {
+	background-color: var(--Dark-cyan);
+}
+
+.primary.disabled {
+	background-color: var(--Dark-gray);
+	cursor: default;
+}
+
+.close-button {
+	position: absolute;
+	right: 32px;
+	top: 32px;
+}
+
+.modal {
+	display: flex;
+	position: relative;
+	align-items: center;
+	flex-direction: column;
+	padding: 40px;
+	border: 1px solid var(--moderate-gray);
+	border-radius: 8px;
+	background-color: white;
+	max-width: 700px;
+}
+
+.modal:first-child {
+	padding-top: 64px;
+}
+
+.modal.left-aligned {
+	text-align: left !important;
+	align-items: start;
+}
+
+.modal.small {
+	max-width: 450px;
+	text-align: center;
+}
+
+.flex-row {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 32px;
+}
+
+.background-overlay {
+	position: fixed;
+	overflow: auto;
+	top: 0;
+	padding-top: 100px;
+	width: 100%;
+	height: 100%;
+	max-height: calc(100vh - 100px);
+	z-index: 20;
+	background-color: rgba(0, 0, 0, 0.727);
+	display: block;
+}
+
+.background-overlay > .modal {
+	margin: auto;
+	padding-top: 40px;
+}
+
+/* || Inputs */
+
+input[type="radio"] {
+	margin-top: 3px;
+	position: relative;
+	appearance: none;
+}
+input[type="radio"]::before {
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid var(--moderate-gray);
+	border-radius: 100%;
+}
+
+input[type="radio"]:checked:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: var(--Moderate-cyan);
+	border-radius: 100%;
+	top: 6px;
+	left: 6px;
+}
+
+.input-amount {
+	display: block;
+	position: relative;
+	z-index: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	border-radius: 32px;
+	font-weight: 700;
+	position: relative;
+	border: 1px solid var(--moderate-gray);
+	width: 100px;
+	height: 100%;
+	text-align: center;
+}
+
+.input-amount:before {
+	z-index: 1;
+	content: "$";
+	display: block;
+	position: absolute;
+	color: var(--moderate-gray);
+	font-weight: 600;
+	font-size: 14px;
+	width: 10px;
+	height: 10px;
+	top: 17px;
+	left: 22px;
+}
+
+input[type="number"]:hover {
+	border: 1px solid var(--Moderate-cyan);
+}
+
+/* || UTILITIES */
+
+.mobile-show {
+	display: none;
+}
+
+/* || Mobile */
+
+@media only screen and (max-width: 520px) {
+	.close-button {
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+
+	.modal {
+		text-align: center;
+		padding: 40px 24px !important;
+	}
+
+	.modal-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		width: 100%;
+	}
+
+	.background-overlay {
+		padding: 24px;
+		max-height: 100vh;
+	}
+	.background-overlay > .modal {
+		width: 75%;
+		margin-top: 5vh;
+	}
+	.background-overlay > .modal.small {
+		margin-top: 30vh;
+	}
+
+	.modal:first-child > .flex-row {
+		margin-top: 32px;
+		width: fit-content;
+	}
+
+	.project-wrapper {
+		padding: 0 24px 0 24px;
+	}
+
+	.flex-row {
+		width: fit-content;
+		gap: 16px;
+		width: 100%;
+		margin: 0;
+	}
+
+	input[type="radio"]::before {
+		width: 25px;
+		height: 25px;
+	}
+
+	input[type="radio"]:checked:after {
+		width: 15px;
+		height: 15px;
+	}
+}
