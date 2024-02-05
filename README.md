@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 -   Solution URL: [Github](https://github.com/okori97/crowdfund-project)
--   Live Site URL: [](https://your-live-site-url.com)
+-   Live Site URL: [Vercel site](https://crowdfund-project-6mgb.vercel.app/)
 
 ## My process
 
